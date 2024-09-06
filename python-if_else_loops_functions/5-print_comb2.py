@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-numbers = [f"{num:02}" for num in range(100)]
-print(", ".join(numbers))
-print("\b\b ")
-
+for i in range(0, 100):
+    if i == 99:
+        print(i)
+    else:
+        print("{:0>2d}".format(i), end=", ")
