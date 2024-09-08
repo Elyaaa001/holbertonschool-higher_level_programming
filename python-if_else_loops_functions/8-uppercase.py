@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-def uppercase(str):
+def uppercase(s):
     result = ""
-    for i in str:
-        if '97' <= i <= '122':
-            result += i - 32
+    for i in s:
+        if 'a' <= i <= 'z':
+            result += chr(ord(i) - 32)
         else:
             result += i
     print(result)
