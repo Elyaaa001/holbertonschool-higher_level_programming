@@ -6,5 +6,5 @@ def uppercase(s):
             result += chr(ord(i) - 32)
         else:
             result += i
-    print(result)
+    print("Converted string: {}".format(result))
 print('')
