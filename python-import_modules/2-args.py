@@ -1,10 +1,12 @@
 #!/usr/bin/python3
 argv = []
-len(argv) == x
+x = len(argv) - 1
 if x == 0:
-    print("{} arguments.".format(x))
-    if x > 0 :
-        print("{} arguments:".format(x))
-         for i in range(1, len(argv)):
-             print("{}: {}".format(i, argv[i]))
+    print("0 arguments.")
+elif x == 1:
+    print("1 argument:")
+else:
+    print("{} arguments:".format(x))
+    for i in range(1, len(argv)):
+        print("{}: {}".format(i, argv[i]))
 if __name__ == "__main__":
