@@ -10,4 +10,4 @@ if __name__  == "__main__":
     result = mul(a, b)
     print("{} * {} = {}".format(a, b, result))
     result = div(a, b)
-    print("{} \ {} = {}".format(a, b, result))
+    print("{} / {} = {}".format(a, b, result))
