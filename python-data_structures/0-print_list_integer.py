@@ -2,4 +2,5 @@
 if __name__ == "__main__":
     import sys
     for i in sys.str[1:]:
-        print(int(i))
+        number = int(i)
+        print("{}".format(number))
