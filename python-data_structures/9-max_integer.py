@@ -5,5 +5,5 @@ def max_integer(my_list=[]):
     for i in my_list:
         largest = my_list[0]
         if i > largest:
-            return i
-    return my_list
+            largest = i
+    return largest
