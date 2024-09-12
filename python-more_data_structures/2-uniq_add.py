@@ -4,4 +4,3 @@ def uniq_add(my_list=[]):
     for int in set(my_list):
         result += int
     return (result)
-
