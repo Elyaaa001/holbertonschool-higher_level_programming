@@ -1,3 +1,7 @@
 #!/usr/bin/python3
-class Square:
+"""Module for creating empty class"""
+
+
+class Square():
+    """Define class"""
     pass
