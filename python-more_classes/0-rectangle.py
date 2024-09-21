@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-"""module for creating a class"""
+"""Function for adding 2 integers"""
 
- class Rectangle():
-    """define class"""
+
+class Rectangle:
+    """Class that defines a rectangle"""
     pass
