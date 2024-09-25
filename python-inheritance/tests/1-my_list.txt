@@ -21,7 +21,7 @@
 >>> my_list.append("iam")
 >>> my_list.append("elina")
 >>> new_list = my_list.print_sorted()
-['iam', 'elina']
+['elina', 'iam']
 
 >>> print(new_list)
 None
