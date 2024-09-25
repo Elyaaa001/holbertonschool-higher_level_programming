@@ -1,12 +1,30 @@
-# Handling invalid instantiation cases
-my_list = MyList(None)  # Raises TypeError: 'NoneType' object is not iterable
+>>> MyList = __import__('1-my_list').MyList
+>>> print_sorted = MyList.print_sorted
 
-my_list = MyList([1, 2], [3, 4])  # Raises TypeError: list expected at most 1 argument, got 2
+>>> my_list = MyList()
+>>> my_list.append(1)
+>>> my_list.append(2)
+>>> my_list.append(0)
+>>> my_list.print_sorted()
+[0, 1, 2]
 
-# Valid instantiation and sorted printing
-my_list = MyList([1, 2, 3])
-my_list.print_sorted()  # Output: [1, 2, 3]
+>>> my_list.clear()
+>>> my_list.print_sorted()
+[]
 
-# Mixed types case
-my_list = MyList([1, "Betty", "Holberton", 5])
-my_list.print_sorted()  # Raises TypeError: unorderable types: cannot compare different types in the list
+>>> my_list.append(2)
+>>> my_list.append(-1)
+>>> my_list.print_sorted()
+[-1, 2]
+
+>>> my_list.clear()
+>>> my_list.append("iam")
+>>> my_list.append("elina")
+>>> new_list = my_list.print_sorted()
+['iam', 'elina']
+
+>>> print(new_list)
+None
+
+>>> print(my_list)
+['iam', 'elina']
