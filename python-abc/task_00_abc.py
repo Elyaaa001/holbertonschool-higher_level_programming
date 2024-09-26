@@ -21,9 +21,3 @@ class Cat(Animal):
     def sound(self):
         return "Meow"
 
-if __name__ == "__main__":
-    dog = Dog()
-    cat = Cat()
-
-    print(f"The dog says: {dog.sound()}")
-    print(f"The cat says: {cat.sound()}")
