@@ -1,8 +1,9 @@
 #!/usr/bin/python3
 from abc import ABC, abstractmethod
+"""salam"""
 
 class Shape(ABC):
-
+"""salam"""
 @abstractmethod
     def area(self):
         """area"""
