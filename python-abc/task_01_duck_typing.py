@@ -7,6 +7,7 @@ from abc import ABC, abstractmethod
 class Shape(ABC):
     """Shape Class abstract"""
     @abstractmethod
+    
     def area(self):
         """abstract method area"""
         pass
