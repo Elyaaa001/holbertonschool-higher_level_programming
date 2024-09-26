@@ -1,40 +1,56 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
+"""create a class"""
+
 from abc import ABC, abstractmethod
-"""salam"""
+
 
 class Shape(ABC):
-"""salam"""
-@abstractmethod
+    """Shape Class abstract"""
+    @abstractmethod
     def area(self):
-        """area"""
+        """abstract method area"""
         pass
 
     @abstractmethod
     def perimeter(self):
-        """perimeter"""
+        """abstract method perimeter"""
         pass
 
+
 class Circle(Shape):
-    """a circle"""
-    
+    """Circle class that inherits from Shape"""
+
     def __init__(self, radius):
+        """initialize Circle"""
         self.radius = radius
-    
+
     def area(self):
-        return 3.14 * self.radius ** 2
-    
+        """implement area method"""
+        return self.radius ** 2 * 3.14159265359
+
     def perimeter(self):
-        return 2 * 3.14 * self.radius
+        """implement perimeter method"""
+        return 2 * (3.14159265359 * self.radius)
+
 
 class Rectangle(Shape):
-    """a rectangle"""
-    
+    """Rectangle class that inherits from Shape"""
+
     def __init__(self, width, height):
+        """initialize Rectangle"""
         self.width = width
         self.height = height
-    
+
     def area(self):
+        """implement area method"""
         return self.width * self.height
-    
+
     def perimeter(self):
+        """implement perimeter method"""
         return 2 * (self.width + self.height)
+
+
+def shape_info(shape):
+    """print the area and perimeter of the shape"""
+    print("Area: {}".format(shape.area()))
+    print("Perimeter: {}".format(shape.perimeter()))
