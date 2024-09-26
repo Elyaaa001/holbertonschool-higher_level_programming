@@ -2,6 +2,7 @@
 """Module for creating empty class"""
 
 
+
 class Square():
     """Define class"""
     pass
