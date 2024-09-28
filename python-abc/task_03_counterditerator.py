@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 class CountedIterator:
     """Class named CountedIterator"""
     def __init__(self, iterable):
