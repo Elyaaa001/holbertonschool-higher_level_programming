@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module containing basic serialization"""
+"""basic serialization"""
 import json
 
 
 def serialize_and_save_to_file(data, filename):
-    """Function to serialize and save to the specified file"""
+    """serialize and save to the specified file"""
 
     
     content = json.dumps(data)
@@ -13,7 +13,7 @@ def serialize_and_save_to_file(data, filename):
 
 
 def load_and_deserialize(filename):
-    """Function to load and deserialize"""
+    """load and deserialize"""
 
     
     with open(filename, 'r', encoding='UTF-8') as file:
