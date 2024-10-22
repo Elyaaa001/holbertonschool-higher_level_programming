@@ -1,2 +1,2 @@
-^--lists data
+--lists data
 SHOW DATABASES;
