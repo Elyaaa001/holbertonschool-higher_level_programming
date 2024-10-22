@@ -1,0 +1,2 @@
+-- remove
+REMOVE DATABASE EXISTS hbtn_0c_0;
