@@ -1,4 +1,4 @@
 -- creating user
-CREATE USER 'user_0d_1'@'localhost' IDENTIFIED BY 'your_password';
-GRANT ALL PRIVILEGES ON database_name.* TO 'user_0d_1'@'localhost';
+CREATE USER 'user_0d_1'@'localhost';
+GRANT SELECT ON *.* TO 'user_0d_1'@'localhost';
 FLUSH PRIVILEGES;
