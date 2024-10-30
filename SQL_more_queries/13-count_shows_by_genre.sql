@@ -1,7 +1,9 @@
--- list all genres
-SELECT genre.name AS genre, COUNT(tv_show_genre.tv_show_id) AS number_of_shows
-FROM genre
-JOIN tv_show_genre ON genre.id = tv_show_genre.genre_id
-GROUP BY genre.name
-HAVING COUNT(tv_show_genre.tv_show_id) > 0
+-- list tv shows
+SELECT gen.name AS genre, COUNT(s.show_id) As number_of_shows
+FROM tv_genres gen
+INNER JOIN  tv_show_genres s
+ON s.genre_id = gen.id
+GROUP BY gen.name
+HAVING
+COUNT(s.show_id) > 0
 ORDER BY number_of_shows DESC;
