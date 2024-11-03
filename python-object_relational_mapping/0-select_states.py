@@ -1,25 +1,22 @@
 #!/usr/bin/python3
-import sys
-import MySQLdb
+"""Module for listing all states"""
 
 if __name__ == "__main__":
-    username = sys.argv[1]
-    password = sys.argv[2]
-    db_name = sys.argv[3]
+    from sys import argv
+    import MySQLdb
 
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
-        user=username,
-        passwd=password,
-        db=db_name
+        user=argv[1],
+        passwd=argv[2],
+        db=argv[3]
     )
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states ORDER BY id ASC")
-    rows =  cursor.fetchall()
 
-    for row in rows:
-        print(row)
+    for state in cursor.fetchall():
+        print(state)
 
     cursor.close()
     db.close()
