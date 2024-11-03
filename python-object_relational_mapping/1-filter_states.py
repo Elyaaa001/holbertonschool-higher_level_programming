@@ -1,27 +1,24 @@
 #!/usr/bin/python3
-"""
-Connecting to database and listing words which start with uppercase N.
-"""
+"""Module"""
 
-import MySQLdb
-from sys import argv
+if __name__ == '__main__':
+    from sys import argv
+    import MySQLdb
 
-if __name__ == "__main__":
     db = MySQLdb.connect(
-        host="localhost",
-        port=3306,
         user=argv[1],
-        passwd=argv[2],
-        db=argv[3]
+        password=argv[2],
+        database=argv[3]
     )
-    mycursor = db.cursor()
+    cursor = db.cursor()
 
-    try:
-        mycursor.execute("SELECT * FROM states ORDER BY id")
-        rows = mycursor.fetchall()
-    except MySQLdb.Error as e:
-        print(e)
+    cursor.execute('SELECT * FROM states ORDER BY id')
 
-    for row in rows:
-        if row[1][0] == 'N':
-            print(row)
+    for state in cursor.fetchall():
+        if state[1][0] == 'N':
+            print(state)
+
+    if cursor:
+        cursor.close()
+    if db:
+        db.close()
